@@ -1,16 +1,21 @@
-console.log('funcionou')
-
-const consurso = document.getElementById('concurso')
-
-console.log(consurso)
-
-const pegar = () => {
+const searchData = () => {
 
     const url = `https://loteriascaixa-api.herokuapp.com/api/mega-sena/latest`
     fetch(url)
     .then(response => response.json())
-    .then(consurso => {
-        console.log(consurso.dezenas)
+    .then(data => {
+        console.log(data.dezenas)
+        console.log(data.nome)
+
+        const concurso = document.getElementById('concurso')
+
+        const loteria = data.nome
+        
+        const sorteio = data.concurso
+
+        const title = `Resultado do concurso ${sorteio} da ${loteria}`
+
+        concurso.innerHTML = title
 
         const dezena1 = document.getElementById('dezena1')
         const dezena2 = document.getElementById('dezena2')
@@ -19,16 +24,16 @@ const pegar = () => {
         const dezena5 = document.getElementById('dezena5')
         const dezena6 = document.getElementById('dezena6')
         
-        dezena1.innerText = consurso.dezenas[0]
-        dezena2.innerText = consurso.dezenas[1]
-        dezena3.innerText = consurso.dezenas[2]
-        dezena4.innerText = consurso.dezenas[3]
-        dezena5.innerText = consurso.dezenas[4]
-        dezena6.innerText = consurso.dezenas[5]
+        dezena1.innerText = data.dezenas[0]
+        dezena2.innerText = data.dezenas[1]
+        dezena3.innerText = data.dezenas[2]
+        dezena4.innerText = data.dezenas[3]
+        dezena5.innerText = data.dezenas[4]
+        dezena6.innerText = data.dezenas[5]
 
     })
 }
 
-pegar()
+searchData()
 
     
