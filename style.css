@@ -1,0 +1,41 @@
+#body{
+    width: auto;
+    height: auto;
+    padding: 4px;
+    background-color: white;
+}
+
+.title {
+    font-size: 48px;
+    font-weight: 900;
+    color: #0066B3;
+    text-align: center;
+}
+
+.dezenas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 4px;
+}
+
+.dezena{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 16px;
+    min-width: 96px;
+    min-height: 96px;
+    border-radius: 100%;
+    background-color: #209869;
+    font-size: 36px;
+    color: white;
+}
+
+/* class="w-auto h-auto bg-white p-4" */
+
+/* class="flex justify-center items-center w-auto h-auto p-8 m-4 text-4xl text-sky-700" */
+
+/* class="flex justify-center p-4" */
+
+/* class="flex justify-center items-center w-12 h-12 m-2 rounded-full bg-green-700 text-white" id="dezena1" */

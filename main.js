@@ -4,16 +4,16 @@ const searchData = () => {
     fetch(url)
     .then(response => response.json())
     .then(data => {
-        console.log(data.dezenas)
-        console.log(data.nome)
 
         const concurso = document.getElementById('concurso')
 
         const loteria = data.nome
         
         const sorteio = data.concurso
+        
+        const date = data.data
 
-        const title = `Resultado do concurso ${sorteio} da ${loteria}`
+        const title = `Resultado concurso ${sorteio} (${date})`
 
         concurso.innerHTML = title
 
