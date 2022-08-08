@@ -1,3 +1,33 @@
+// https://github.com/guto-alves/loterias-api
+
+const lotterys = () => {
+    const url = 'https://loteriascaixa-api.herokuapp.com/api'
+
+    fetch(url)
+    .then(response => response.json())
+    .then((data) => {
+
+        loterias = []
+
+        loterias.push(data)
+
+        loterias.forEach(loteria => {
+            
+            const loterias = document.getElementById('loterias')
+            
+            let newLi = document.createElement('li')
+            
+            let addLottery = document.createTextNode(loteria)
+            
+            newLi.appendChild(addLottery)
+            
+            document.body.insertBefore(newLi, loterias)
+        });
+    })
+}
+
+lotterys()
+
 const searchData = () => {
 
     const url = `https://loteriascaixa-api.herokuapp.com/api/mega-sena/latest`
@@ -7,13 +37,13 @@ const searchData = () => {
 
         const concurso = document.getElementById('concurso')
 
-        const loteria = data.nome
+        const lottery = data.nome
         
         const sorteio = data.concurso
         
         const date = data.data
 
-        const title = `Resultado concurso ${sorteio} (${date})`
+        const title = `Resultado da ${lottery} concurso ${sorteio} (${date})`
 
         concurso.innerHTML = title
 
