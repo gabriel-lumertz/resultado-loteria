@@ -8,34 +8,159 @@
 .title {
     font-size: 48px;
     font-weight: 900;
-    color: #0066B3;
+    color: black;
     text-align: center;
 }
 
-.dezenas{
+.loterias {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 4px;
 }
 
-.dezena{
+.mega-sena {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    margin: 16px;
+    min-width: 120px;
+    min-height: 120px;
+    border-radius: 50%;
+    background-color: #209869;
+    font-size: 18px;
+    color: white;
+}
+
+.lotofacil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    margin: 16px;
+    min-width: 120px;
+    min-height: 120px;
+    border-radius: 50%;
+    background-color: #930989;
+    font-size: 18px;
+    color: white;
+}
+
+.quina {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    margin: 16px;
+    min-width: 120px;
+    min-height: 120px;
+    border-radius: 50%;
+    background-color: #260085;
+    font-size: 18px;
+    color: white;
+}
+
+.lotomania {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    margin: 16px;
+    min-width: 120px;
+    min-height: 120px;
+    border-radius: 50%;
+    background-color: #F78100;
+    font-size: 18px;
+    color: white;
+}
+
+.timemania {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    margin: 16px;
+    min-width: 120px;
+    min-height: 120px;
+    border-radius: 50%;
+    background-color: #FFF600;
+    font-size: 18px;
+    color: white;
+}
+
+.dupla-sena {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    margin: 16px;
+    min-width: 120px;
+    min-height: 120px;
+    border-radius: 50%;
+    background-color:#BF194E;
+    font-size: 18px;
+    color: white;
+}
+
+.loteria-federal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    margin: 16px;
+    min-width: 120px;
+    min-height: 120px;
+    border-radius: 50%;
+    background-color: #0081BA;
+    font-size: 18px;
+    color: white;
+}
+
+.dia-de-sorte {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    margin: 16px;
+    min-width: 120px;
+    min-height: 120px;
+    border-radius: 50%;
+    background-color: #D3B315;
+    font-size: 18px;
+    color: white;
+}
+
+.super-sete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    margin: 16px;
+    min-width: 120px;
+    min-height: 120px;
+    border-radius: 50%;
+    background-color: #A8CF45;
+    font-size: 18px;
+    color: white;
+}
+
+.dezenas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 4px;
+}
+
+.dezena {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 16px;
     min-width: 96px;
     min-height: 96px;
-    border-radius: 100%;
-    background-color: #209869;
+    border-radius: 50%;
+    background-color: #0066B3;
     font-size: 36px;
     color: white;
 }
-
-/* class="w-auto h-auto bg-white p-4" */
-
-/* class="flex justify-center items-center w-auto h-auto p-8 m-4 text-4xl text-sky-700" */
-
-/* class="flex justify-center p-4" */
-
-/* class="flex justify-center items-center w-12 h-12 m-2 rounded-full bg-green-700 text-white" id="dezena1" */
