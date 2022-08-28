@@ -1,6 +1,7 @@
 // https://github.com/guto-alves/loterias-api
 
 const lotterys = () => {
+    
     const url = 'https://loteriascaixa-api.herokuapp.com/api'
 
     fetch(url)
@@ -11,7 +12,7 @@ const lotterys = () => {
 
             const list = document.getElementById("loterias")
 
-            const listItem = `<li class="${item}" onclick="${item.replace("-", "").replace("-", "")}()">${item}</li>`
+            const listItem = `<li class="${item}" onclick="${item.replace(/-/g, "")}()">${item}</li>`
 
             list.innerHTML += listItem
 
@@ -27,7 +28,7 @@ lotterys()
 function megasena() {
 
     function clearUl() {
-        let ulDezenas = document.getElementById("dezenas");
+        let ulDezenas = document.getElementById("dezenas")
         ulDezenas.innerText = ""
     }
     
@@ -65,7 +66,7 @@ function megasena() {
         })
     })
     
-} 
+}
 
 function lotofacil() {
 
