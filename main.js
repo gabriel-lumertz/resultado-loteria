@@ -1,8 +1,10 @@
 // https://github.com/guto-alves/loterias-api
 
+const url_base = 'https://loteriascaixa-api.herokuapp.com/api/'
+
 const lotterys = () => {
     
-    const url = 'https://loteriascaixa-api.herokuapp.com/api'
+    url = url_base
 
     fetch(url)
     .then(response => response.json())
@@ -34,7 +36,7 @@ function maismilionaria() {
 
     clearUl()
 
-    const url = `https://loteriascaixa-api.herokuapp.com/api/maismilionaria/latest`
+    const url = `${url_base}maismilionaria/latest`
     fetch(url)
     .then(response => response.json())
     .then(data => {

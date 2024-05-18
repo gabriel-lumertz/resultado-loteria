@@ -14,7 +14,8 @@
 
 .loterias {
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+    flex: 1;
     justify-content: center;
     padding: 4px;
     list-style-type: none;
@@ -32,6 +33,7 @@
     background-color: #2E3078;
     font-size: 18px;
     color: white;
+    cursor: pointer;
 }
 
 .megasena {
@@ -46,6 +48,7 @@
     background-color: #209869;
     font-size: 18px;
     color: white;
+    cursor: pointer;
 }
 
 .lotofacil {
@@ -60,6 +63,7 @@
     background-color: #930989;
     font-size: 18px;
     color: white;
+    cursor: pointer;
 }
 
 .quina {
@@ -74,6 +78,7 @@
     background-color: #260085;
     font-size: 18px;
     color: white;
+    cursor: pointer;
 }
 
 .lotomania {
@@ -88,6 +93,7 @@
     background-color: #F78100;
     font-size: 18px;
     color: white;
+    cursor: pointer;
 }
 
 .timemania {
@@ -102,6 +108,7 @@
     background-color: #FFF600;
     font-size: 18px;
     color: white;
+    cursor: pointer;
 }
 
 .duplasena {
@@ -116,6 +123,7 @@
     background-color:#BF194E;
     font-size: 18px;
     color: white;
+    cursor: pointer;
 }
 
 .federal {
@@ -130,6 +138,7 @@
     background-color: #0081BA;
     font-size: 18px;
     color: white;
+    cursor: pointer;
 }
 
 .diadesorte {
@@ -144,6 +153,7 @@
     background-color: #D3B315;
     font-size: 18px;
     color: white;
+    cursor: pointer;
 }
 
 .supersete {
@@ -158,6 +168,7 @@
     background-color: #A8CF45;
     font-size: 18px;
     color: white;
+    cursor: pointer;
 }
 
 .dezenas {
@@ -180,4 +191,20 @@
     background-color: #0066B3;
     font-size: 36px;
     color: white;
+}
+
+footer {
+    text-align: center;
+    margin-top: 15%;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+
+a:hover {
+    background-color: #0066B3;
+    color: aliceblue;
 }
