@@ -17,9 +17,24 @@
     flex-wrap: wrap;
     justify-content: center;
     padding: 4px;
+    list-style-type: none;
 }
 
-.mega-sena {
+.maismilionaria {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    margin: 16px;
+    min-width: 120px;
+    min-height: 120px;
+    border-radius: 50%;
+    background-color: #2E3078;
+    font-size: 18px;
+    color: white;
+}
+
+.megasena {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -89,7 +104,7 @@
     color: white;
 }
 
-.dupla-sena {
+.duplasena {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -103,7 +118,7 @@
     color: white;
 }
 
-.loteria-federal {
+.federal {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -117,7 +132,7 @@
     color: white;
 }
 
-.dia-de-sorte {
+.diadesorte {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -131,7 +146,7 @@
     color: white;
 }
 
-.super-sete {
+.supersete {
     display: flex;
     justify-content: center;
     align-items: center;

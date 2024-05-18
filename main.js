@@ -16,7 +16,7 @@ const lotterys = () => {
 
             list.innerHTML += listItem
 
-            console.log(item)
+            // console.log(item)
 
         });
         
@@ -25,23 +25,61 @@ const lotterys = () => {
 
 lotterys()
 
-function megasena() {
+function clearUl() {
+    let ulDezenas = document.getElementById("dezenas")
+    ulDezenas.innerText = ""
+}
 
-    function clearUl() {
-        let ulDezenas = document.getElementById("dezenas")
-        ulDezenas.innerText = ""
-    }
-    
+function maismilionaria() {
+
     clearUl()
 
-    const url = `https://loteriascaixa-api.herokuapp.com/api/mega-sena/latest`
+    const url = `https://loteriascaixa-api.herokuapp.com/api/maismilionaria/latest`
     fetch(url)
     .then(response => response.json())
     .then(data => {
 
         const concurso = document.getElementById('concurso')
 
-        const lottery = data.nome
+        const lottery = data.loteria
+        
+        const sorteio = data.concurso
+        
+        const date = data.data
+
+        const title = `Resultado da ${lottery} concurso ${sorteio} (${date})`
+
+        concurso.innerHTML = title
+
+        result = []
+
+        result = data.dezenas
+
+        result.forEach((item) => {   
+
+            const list = document.getElementById("dezenas")
+
+            const listItem = `<li class="dezena">${item}</li>`
+
+            list.innerHTML += listItem
+
+        })
+    })
+    
+}
+
+function megasena() {
+
+    clearUl()
+
+    const url = `https://loteriascaixa-api.herokuapp.com/api/megasena/latest`
+    fetch(url)
+    .then(response => response.json())
+    .then(data => {
+
+        const concurso = document.getElementById('concurso')
+
+        const lottery = data.loteria
         
         const sorteio = data.concurso
         
@@ -69,11 +107,6 @@ function megasena() {
 }
 
 function lotofacil() {
-
-    function clearUl() {
-        let ulDezenas = document.getElementById("dezenas");
-        ulDezenas.innerText = ""
-    }
     
     clearUl()
 
@@ -84,7 +117,7 @@ function lotofacil() {
 
         const concurso = document.getElementById('concurso')
 
-        const lottery = data.nome
+        const lottery = data.loteria
         
         const sorteio = data.concurso
         
@@ -112,11 +145,6 @@ function lotofacil() {
 }
 
 function quina() {
-
-    function clearUl() {
-        let ulDezenas = document.getElementById("dezenas");
-        ulDezenas.innerText = ""
-    }
     
     clearUl()
 
@@ -127,7 +155,7 @@ function quina() {
 
         const concurso = document.getElementById('concurso')
 
-        const lottery = data.nome
+        const lottery = data.loteria
         
         const sorteio = data.concurso
         
@@ -155,11 +183,6 @@ function quina() {
 }
 
 function lotomania() {
-
-    function clearUl() {
-        let ulDezenas = document.getElementById("dezenas");
-        ulDezenas.innerText = ""
-    }
     
     clearUl()
 
@@ -170,7 +193,7 @@ function lotomania() {
 
         const concurso = document.getElementById('concurso')
 
-        const lottery = data.nome
+        const lottery = data.loteria
         
         const sorteio = data.concurso
         
@@ -198,11 +221,6 @@ function lotomania() {
 }
 
 function timemania() {
-
-    function clearUl() {
-        let ulDezenas = document.getElementById("dezenas");
-        ulDezenas.innerText = ""
-    }
     
     clearUl()
 
@@ -213,7 +231,7 @@ function timemania() {
 
         const concurso = document.getElementById('concurso')
 
-        const lottery = data.nome
+        const lottery = data.loteria
         
         const sorteio = data.concurso
         
@@ -241,22 +259,17 @@ function timemania() {
 }
 
 function duplasena() {
-
-    function clearUl() {
-        let ulDezenas = document.getElementById("dezenas");
-        ulDezenas.innerText = ""
-    }
     
     clearUl()
 
-    const url = `https://loteriascaixa-api.herokuapp.com/api/dupla-sena/latest`
+    const url = `https://loteriascaixa-api.herokuapp.com/api/duplasena/latest`
     fetch(url)
     .then(response => response.json())
     .then(data => {
 
         const concurso = document.getElementById('concurso')
 
-        const lottery = data.nome
+        const lottery = data.loteria
         
         const sorteio = data.concurso
         
@@ -283,23 +296,18 @@ function duplasena() {
     
 }
 
-function loteriafederal() {
+function federal() {
 
-    function clearUl() {
-        let ulDezenas = document.getElementById("dezenas");
-        ulDezenas.innerText = ""
-    }
-    
     clearUl()
 
-    const url = `https://loteriascaixa-api.herokuapp.com/api/loteria-federal/latest`
+    const url = `https://loteriascaixa-api.herokuapp.com/api/federal/latest`
     fetch(url)
     .then(response => response.json())
     .then(data => {
 
         const concurso = document.getElementById('concurso')
 
-        const lottery = data.nome
+        const lottery = data.loteria
         
         const sorteio = data.concurso
         
@@ -327,22 +335,17 @@ function loteriafederal() {
 }
 
 function diadesorte() {
-
-    function clearUl() {
-        let ulDezenas = document.getElementById("dezenas");
-        ulDezenas.innerText = ""
-    }
     
     clearUl()
 
-    const url = `https://loteriascaixa-api.herokuapp.com/api/dia-de-sorte/latest`
+    const url = `https://loteriascaixa-api.herokuapp.com/api/diadesorte/latest`
     fetch(url)
     .then(response => response.json())
     .then(data => {
 
         const concurso = document.getElementById('concurso')
 
-        const lottery = data.nome
+        const lottery = data.loteria
         
         const sorteio = data.concurso
         
@@ -370,22 +373,17 @@ function diadesorte() {
 }
 
 function supersete() {
-
-    function clearUl() {
-        let ulDezenas = document.getElementById("dezenas");
-        ulDezenas.innerText = ""
-    }
     
     clearUl()
 
-    const url = `https://loteriascaixa-api.herokuapp.com/api/super-sete/latest`
+    const url = `https://loteriascaixa-api.herokuapp.com/api/supersete/latest`
     fetch(url)
     .then(response => response.json())
     .then(data => {
 
         const concurso = document.getElementById('concurso')
 
-        const lottery = data.nome
+        const lottery = data.loteria
         
         const sorteio = data.concurso
         
